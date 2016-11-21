@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trabalho de CG 2.1</title>
+	<meta charset="utf-8">
+	
+</head>
+
+<body bgcolor="#888888">
+	
+	<div id="container" style="margin: 0px auto; width: 1000px; border: 1px solid black; height: 500px;">
+		<div id="barra_lateral" style="border: 1px solid black; width: 120px; height: 500px; float: left;" >
+			Ferramentas:<br>
+			<input id="ponto" style="width: 100px; height:30px; margin-top: 20px;margin-left: 10px;margin-bottom: 10px;" type="button" value="Ponto" onclick="generateNewPoint();"/><br>
+			<input id="linha" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Linha" onclick="generateNewLine();"/><br>
+			<input id="linha" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Arco" onclick="generateNewArc();"/><br>
+			<input id="bezier" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Bezier" onclick="generateNewBezier();"/><br>
+			<input id="area" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Área" onclick="generateNewArea();"/><br>
+			<input id="colorwheel" style="width: 100px; height:30px; margin-left: 7.5px; margin-bottom: 10px;" type="color" value="#000000" name="chooseColor" ><br>
+			Tranformações<br>
+			<input id="scale" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Escalar" onclick="scaleFlag();"/><br>
+			<input id="rotate" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Rotacionar" onclick="rotationFlag();"/><br>
+			<input id="espelhar" style="width: 100px; height:30px; margin-left: 10px;margin-bottom: 10px;" type="button" value="Espelhar" onclick="mirrorFlag();"/><br>
+
+		</div>
+		<div id="canvas_container" style="left: 10px; border: 1px solid black; width: 850px; height: 500px; float: left; margin-left: 15px;">
+			<canvas id="myCanvas" width="850" height="500"> </canvas>
+		</div>
+	</div>
+	
+	<center>
+	<br>
+	<form>
+		<input type="file" id="fileinput" name="file[]" multiple/>
+	</form>
+	
+	<form>
+		<a href id="save">Save</a>
+		<a href id="about">About</a>
+		<a href id="clear">Clear</a>
+	</form>
+	</center>
+	
+	<script>
+	document.getElementById('about').onclick = function(){
+		alert("Trabalho de Computação Gráfica\nProfessor: Anselmo Cardoso de Paiva \nUFMA - Ciência da Computação \nRodrigo Kanehisa");
+	}
+	</script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="mouseFunction.js"></script>
+	<script type="text/javascript" src="point.js"></script>
+	<script type="text/javascript" src="line.js"></script>
+	<script type="text/javascript" src="arc.js"></script>
+	<script type="text/javascript" src="bezier.js"></script>
+	<script type="text/javascript" src="area.js"></script>
+	<script type="text/javascript" src="utils.js"></script>
+
+</body>
+</html>
